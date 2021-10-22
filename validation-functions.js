@@ -15,7 +15,7 @@ $(document).ready(function() {
                         message: 'The first name is required and cannot be empty.'
                     },        
                     regexp: {
-                        regexp: /^[A-z]+$/,
+                        regexp: /^[A-z]+$/ || " ",
                         message: 'The name can only accept alphabetical input.'
                     },
                 }
