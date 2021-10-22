@@ -68,6 +68,8 @@ $(document).ready(function() {
         })
             .fail(function(data) {
                 console.warn("Error! Data: " + data.statusText);
+                document.getElementById("test-form").style.display = "none"  
+                    document.getElementById("ty").style.display = "block" 
                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
                 if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
                     //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
