@@ -1,19 +1,12 @@
-$(document).ready ( function() {
-    var url = "https://api.apispreadsheets.com/data/19650/?dataFormat=column"
 
-    var go = $.get(url, function(data) {
-    const array = data.Quantity;
-    let sum = 0;
+$(document).ready ( function(e) {
 
-   for (let i = 0; i < array.length; i++) {
-    const number = parseInt(array[i]);
-    if(!isNaN(number)){
-    sum += number
-    }
-   }
-        document.getElementById('count').innerHTML = sum.toLocaleString() + " jackets pledged!" ;
+    var url = 'https://script.google.com/macros/s/AKfycbzRmpspcZ5xRb9eHaKlvn9QpNzXy30gcPbCY5m4WlATxS29UEVhdhdsKb7DRtZatzCl9g/exec';
 
-    });
-  
+    var go = $.post(url, function(data) {
+        console.log(data)
+        document.getElementById('count').innerHTML = data.rowCount.toLocaleString() + " jackets pledged!" ;
+       
 
+    })
 })
