@@ -3,9 +3,9 @@ $(document).ready(function() {
         //submitButtons: '#postForm',
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+            valid: '',
+            invalid: '',
+            validating: ''
         },        
         fields: {
             Name: {
@@ -62,14 +62,27 @@ $(document).ready(function() {
         // show the loading 
         $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
         var go = $.post(url, $form.serialize(), function(data) {
+            var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
+            var go = $.post(url, function(data) {
+                console.log(data)
+                document.getElementById('count').innerHTML = data.rowCount.toLocaleString() + " jackets pledged!" ;
+               
+            })
            document.getElementById("test-form").style.display = "none"
            document.getElementById("ty").style.display = "block"
+           
 
         })
             .fail(function(data) {
                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
                 if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
                     //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+                    var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
+                    var go = $.post(url, function(data) {
+                        console.log(data)
+                        document.getElementById('count').innerHTML = data.rowCount.toLocaleString() + " jackets pledged!" ;
+                       
+                    })
                     document.getElementById("test-form").style.display = "none"  
                     document.getElementById("ty").style.display = "block"             
                 }

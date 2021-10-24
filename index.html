@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" oncontextmenu="return false">
 <head>
   <title>1000 Jackets</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+  <meta charset="UTF-8">
+  <meta name="description" content="PLEDGE IN 1,000 JACKETS CAMPAIGN - MYANMAR."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+
   <!-- bootstrap & fontawesome css -->
   <link href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <!-- BootstrapValidator CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
 
+  <link rel="stylesheet" href="css/main.css">
   <!-- jQuery and Bootstrap JS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -79,22 +94,21 @@
       </div>
     </div>
 
-    <div id="total">0 Kyats</div>
-
+  
     <script> 
         const selectElement = document.getElementById("quantity");        
         selectElement.addEventListener('change', (event) => {
             var jackets = 0;       
             jackets = Number(document.getElementById("quantity").value)                    
             total = jackets * 4000;
-            document.getElementById('total').innerHTML = total.toLocaleString() + " Kyats";
+            document.getElementById('total').innerHTML = "Pledge " + total.toLocaleString() + " Kyats";
         }); 
              
     </script>
 
     <div class="form-group">
       <div class="col-lg-9 col-lg-offset-3">
-        <button type="submit" class="btn btn-default" id="postForm">Submit</button>
+        <button type="submit" class="btn btn-default" id="postForm"><div id="total">Pledge 0 Kyats</div></button>   
       </div>
     </div>
 
@@ -105,18 +119,22 @@
   <div class="container" id="ty" style="display: none;">
     <div class="row">
       <div class="col-lg-12">
-        <h2>Success</h2>
-        <p id=namecerts>    
-        <p>
-            <p> 
-                pledged.   
-            <p>
+        <h2>Your pledge is recorded!</h2>
+        <img src="IMG-5452.PNG" alt="certificate">
+        <p id=certs></p>
+        <p>#1000JacketsCampaign</p>
       </div>
     </div>
 <script>
     const nameElement = document.getElementById("name");        
     nameElement.addEventListener('change', (event) => {
-        document.getElementById('namecerts').innerHTML = document.getElementById("name").value; 
+        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets."
+        document.getElementById('certs').innerHTML = certsText
+    }); 
+    const quantityElement = document.getElementById("quantity");        
+    quantityElement.addEventListener('change', (event) => {
+        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets."
+        document.getElementById('certs').innerHTML = certsText
     }); 
 </script>
 

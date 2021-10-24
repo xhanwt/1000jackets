@@ -1,0 +1,26 @@
+
+*{
+    font-family: 'Kanit', sans-serif !important;
+    color: #0099ff;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background-image: url("../image-1.jpg");
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
