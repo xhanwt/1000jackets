@@ -1,7 +1,7 @@
 
 *{
     font-family: 'Kanit', sans-serif !important;
-    color: #0099ff;
+    color: #000000;
 }
 html, body {
     height: 100%;
@@ -20,7 +20,40 @@ body {
 
 }
 
-.container {
-    height: 100%;
-    width: 100%;
+.title {
+    color:rgb(0, 24, 131);
 }
+
+.subtitle {
+    color:rgb(0, 11, 114);
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .button {
+    text-color: black;
+    border: 2px solid #000000; /* Green */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+  }
+  
+  .button:hover {
+    background-color: rgb(129, 255, 249); /* Green */
+    color: white;
+  }
+

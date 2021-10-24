@@ -59,13 +59,13 @@
   <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>#1000JacketsCampaign</h2>
-      <p id="count">
+      <h2 class="title">#1000JacketsCampaign</h2>
+      <p id="count" class="subtitle">
       <p>
     </div>
   </div>
   <hr>
-  <form class="form-horizontal" role="form" id="test-form">
+  <form class="form-horizontal" role="form" id="test-form" style="display: none;">
     <div class="form-group">
       <label class="col-lg-3 control-label">Name</label>
       <div class="col-lg-3 inputGroupContainer">
@@ -108,7 +108,7 @@
 
     <div class="form-group">
       <div class="col-lg-9 col-lg-offset-3">
-        <button type="submit" class="btn btn-default" id="postForm"><div id="total">Pledge 0 Kyats</div></button>   
+        <button type="submit" class="button" id="postForm"><div id="total">Pledge 0 Kyats</div></button>   
       </div>
     </div>
 
@@ -117,23 +117,51 @@
   </div>
 
   <div class="container" id="ty" style="display: none;">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Your pledge is recorded!</h2>
-        <img src="IMG-5452.PNG" alt="certificate">
-        <p id=certs></p>
-        <p>#1000JacketsCampaign</p>
+    <P style="font-size: 200%; color:rgb(0, 0, 85) ;">YOUR PLEDGE IS RECORDED!</P>
+    <br><br>
+    <div class="card"><br><br>
+      <img src="IMG-5452.PNG" alt="Avatar" style="height:30%; width: 30%;">
+      <div class="container">
+        <br>
+        <h4><b id=certs></b></h4>
+        <p>#1000JacketsCampaign<br>JOIN US TODAY!</p>         
+        <br><br><br><br>
       </div>
     </div>
+    <br><br><br><br><br><br>
+  </div>
+
+  <div class="container" id="welcome" style="display: block;">
+    <br><br>
+    <div class="card"><br><br>
+      <img src="IMG-5452.PNG" alt="Avatar" style="height:30%; width: 30%;">
+      <div class="container">
+        <br>
+        <h4><b style="font-size: 200%; color:rgb(50, 139, 255);">JACKET CAMPAIGN</b></h4>
+        <h3>အနွေးဓာတ်ကို မျှဝေခံစားမယ်</h3>
+        <p>#1000JacketsCampaign</p>
+        <button type="submit" class="button" id="enter" onclick="enter()">JOIN US TODAY!</button> 
+        <br><br><br><br>
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+  </div>
+
+
 <script>
+  function enter() {
+    document.getElementById("welcome").style.display = "none"  
+    document.getElementById("test-form").style.display = "block" 
+  }
+
     const nameElement = document.getElementById("name");        
     nameElement.addEventListener('change', (event) => {
-        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets."
+        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets per month."
         document.getElementById('certs').innerHTML = certsText
     }); 
     const quantityElement = document.getElementById("quantity");        
     quantityElement.addEventListener('change', (event) => {
-        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets."
+        var certsText = document.getElementById("name").value.toUpperCase()+ " pledged for " + document.getElementById("quantity").value + " jackets per month."
         document.getElementById('certs').innerHTML = certsText
     }); 
 </script>
