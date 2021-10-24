@@ -47,13 +47,14 @@ body {
   }
   .button {
     text-color: black;
+    background-color: rgb(255, 255, 255);
     border: 2px solid #000000; /* Green */
     transition-duration: 0.4s;
     border-radius: 8px;
   }
   
   .button:hover {
-    background-color: rgb(129, 255, 249); /* Green */
+    background-color: rgb(42, 134, 255); /* Green */
     color: white;
   }
 
