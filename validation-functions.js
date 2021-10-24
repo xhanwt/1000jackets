@@ -70,7 +70,7 @@ $(document).ready(function() {
             })
            document.getElementById("test-form").style.display = "none"
            document.getElementById("ty").style.display = "block"
-           alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!')
+           setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!') }, 1000);
             
            
 
@@ -87,7 +87,8 @@ $(document).ready(function() {
                     })
                     document.getElementById("test-form").style.display = "none"  
                     document.getElementById("ty").style.display = "block"
-                    alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!')             
+                    setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!') }, 1000);
+                                
                 }
             });
     });
