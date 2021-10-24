@@ -54,7 +54,7 @@ body {
   }
   
   .button:hover {
-    background-color: rgb(42, 134, 255); /* Green */
+    background-color: rgb(134, 187, 255); /* Green */
     color: white;
   }
 
