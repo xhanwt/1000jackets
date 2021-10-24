@@ -60,7 +60,7 @@ $(document).ready(function() {
         var url = 'https://script.google.com/macros/s/AKfycbzNmvjNezi3CZ5BVd5tQdlUJ29P5vEcIVoxYmP5DyO8n3aDVThAd4hOUKby2q5tKZtczw/exec';
         var redirectUrl = 'success-page.html';
         // show the loading 
-        $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
+        $('#postForm').prepend($('<span></span>').addClass('🍤'));
         var go = $.post(url, $form.serialize(), function(data) {
             var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
             var go = $.post(url, function(data) {
