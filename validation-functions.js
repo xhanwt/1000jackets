@@ -65,12 +65,12 @@ $(document).ready(function() {
             var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
             var go = $.post(url, function(data) {
                 console.log(data)
-                document.getElementById('count').innerHTML = data.rowCount.toLocaleString() + " jackets pledged!" ;
+                document.getElementById('count').innerHTML = "Total "+data.rowCount.toLocaleString() + " jackets pledged monthly!"
                
             })
            document.getElementById("test-form").style.display = "none"
            document.getElementById("ty").style.display = "block"
-           setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!') }, 1000);
+           setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshot and save your pledge!') }, 1000);
             
            
 
@@ -82,12 +82,12 @@ $(document).ready(function() {
                     var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
                     var go = $.post(url, function(data) {
                         console.log(data)
-                        document.getElementById('count').innerHTML = data.rowCount.toLocaleString() + " jackets pledged!" ;
+                        document.getElementById('count').innerHTML = "Total "+data.rowCount.toLocaleString() + " jackets pledged monthly!" ;
                        
                     })
                     document.getElementById("test-form").style.display = "none"  
                     document.getElementById("ty").style.display = "block"
-                    setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshoot and save your pledge!') }, 1000);
+                    setTimeout(() => {alert('Thanks for your pledge. Don\'t forget to screenshot and save your pledge!') }, 1000);
                                 
                 }
             });
