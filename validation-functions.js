@@ -62,8 +62,8 @@ $(document).ready(function() {
         // show the loading 
         $('#postForm').prepend($('<span></span>').addClass(''));
         var go = $.post(url, $form.serialize(), function(data) {
-            var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
-            var go = $.post(url, function(data) {
+            var url2 = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
+            var go = $.post(url2, function(data) {
                 console.log(data)
                 document.getElementById('count').innerHTML = "Total "+data.rowCount.toLocaleString() + " jackets pledged monthly!"
                
@@ -79,8 +79,8 @@ $(document).ready(function() {
                 // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
                 if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
                     //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
-                    var url = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
-                    var go = $.post(url, function(data) {
+                    var url3 = 'https://script.google.com/macros/s/AKfycbzyDsYS_my55wCcQZqZ8HgCHmdcjCw5lasu0HW8WQj7ILJrddjWV5f1EknV9plcch_fWA/exec';
+                    var go = $.post(url3, function(data) {
                         console.log(data)
                         document.getElementById('count').innerHTML = "Total "+data.rowCount.toLocaleString() + " jackets pledged monthly!" ;
                        
